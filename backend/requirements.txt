@@ -1,0 +1,37 @@
+# FastAPI and Server
+fastapi
+uvicorn
+
+# Machine Learning
+scikit-learn
+numpy
+scipy
+joblib
+
+# Text Processing
+nltk
+regex
+
+# Vectorization
+scikit-learn
+
+# Google API for Gmail and Gemini AI
+google-auth
+google-auth-oauthlib
+google-auth-httplib2
+google-api-python-client
+google-generativeai
+
+# Data Validation
+pydantic
+
+# Environment Variables
+python-dotenv
+
+# HTTP Requests
+requests
+
+# CORS Middleware
+fastapi[all]
+
+#pip install -r requirements.txt

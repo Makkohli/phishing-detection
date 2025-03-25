@@ -1,0 +1,56 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.pyo
+*.pyd
+
+# Environment
+.env
+*.env
+
+# Virtual Environment
+venv/
+env/
+*.venv
+*.virtualenv
+
+# Logs and Debug Files
+*.log
+*.out
+*.err
+logs/
+debug.log
+
+# IDE and Editor Configs
+.vscode/
+.idea/
+*.swp
+*~
+
+# OS Specific
+.DS_Store
+Thumbs.db
+
+# Models and Checkpoints
+models/*.pkl
+models/*.h5
+models/*.joblib
+
+# Node Modules (if used for frontend/backend)
+node_modules/
+
+# Data and Output
+data/
+*.sqlite3
+*.db
+*.sql
+
+# Build
+dist/
+build/
+
+# Ignore credential.json file
+credential.json

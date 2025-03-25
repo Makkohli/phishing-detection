@@ -28,32 +28,6 @@ This project detects **phishing attempts** and analyzes the **emotional tone** o
 
 ---
 
-## 🏗️ **Project Structure**  
-
-```bash
-phishing-detection/
-├── backend/
-│   ├── models/                      # Pretrained ML models
-│   ├── routes/                      # API routes
-│   ├── utils/                       # Utility functions
-│   ├── main.py                      # FastAPI entry point
-│   ├── email_routes.py              # Email analysis APIs
-│   └── credential.json              # Gmail API credentials (ignored in Git)
-├── frontend/
-│   ├── public/                      # Static assets
-│   ├── src/                         # Frontend source code
-│   │   ├── components/              # Reusable UI components
-│   │   ├── pages/                   # Pages like Home, Dashboard
-│   │   ├── hooks/                   # API Hooks
-│   │   └── App.js                   # Main App component
-│   └── tailwind.config.js           # Tailwind CSS config
-├── .gitignore                       # Ignoring unnecessary files
-├── requirements.txt                 # Python dependencies
-└── README.md                        # Project documentation
-```
-
----
-
 ## ⚙️ **Prerequisites**  
 
 Ensure you have the following installed:  

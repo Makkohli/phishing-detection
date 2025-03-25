@@ -1,7 +1,3 @@
-Here's a detailed README for your project:  
-
----
-
 # **AI for Emotional Manipulation Detection in Cyber Attacks**  
 
 This project detects **phishing attempts** and analyzes the **emotional tone** of emails using AI models. It uses a combination of **FastAPI** for the backend, **Next.js** for the frontend, and **machine learning models** for phishing and emotion detection. The system also supports optional **Gemini AI integration** for advanced analysis.  
@@ -176,7 +172,3 @@ This project is licensed under the MIT License.
 - **Author:** Manish Kohli  
 - **GitHub:** [Makkohli](https://github.com/Makkohli)  
 - **Email:** manish@example.com  
-
----
-
-This README provides detailed documentation for your project. If you'd like further customization, let me know! 😊

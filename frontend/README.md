@@ -1,70 +1,182 @@
-# Getting Started with Create React App
+Here's a detailed README for your project:  
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+# **AI for Emotional Manipulation Detection in Cyber Attacks**  
 
-In the project directory, you can run:
+This project detects **phishing attempts** and analyzes the **emotional tone** of emails using AI models. It uses a combination of **FastAPI** for the backend, **Next.js** for the frontend, and **machine learning models** for phishing and emotion detection. The system also supports optional **Gemini AI integration** for advanced analysis.  
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🚀 **Features**  
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Phishing Detection:** Predicts whether an email is a phishing attempt using a trained model.  
+- **Emotion Analysis:** Detects emotional tones using an emotion classification model.  
+- **Gemini AI Integration (Optional):** Provides detailed insights using Google's Gemini API.  
+- **Email Authentication:** Authenticate and fetch emails using Gmail API.  
+- **Interactive Dashboard:** Visualize and analyze results on the frontend.  
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠️ **Tech Stack**  
 
-### `npm run build`
+| Component        | Technology                                  |
+|-------------------|--------------------------------------------|
+| **Frontend**      | Next.js, Tailwind CSS                      |
+| **Backend**       | FastAPI, Python                            |
+| **Database**      | PostgreSQL or MongoDB                      |
+| **AI Models**     | DistilBERT, Random Forest, XGBoost         |
+| **APIs**          | Gmail API, Gemini API (Optional)           |
+| **ML Libraries**  | Scikit-Learn, NumPy, Pandas, Joblib        |
+| **Authentication**| OAuth2 (Google Authentication)             |
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🏗️ **Project Structure**  
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+phishing-detection/
+├── backend/
+│   ├── models/                      # Pretrained ML models
+│   ├── routes/                      # API routes
+│   ├── utils/                       # Utility functions
+│   ├── main.py                      # FastAPI entry point
+│   ├── email_routes.py              # Email analysis APIs
+│   └── credential.json              # Gmail API credentials (ignored in Git)
+├── frontend/
+│   ├── public/                      # Static assets
+│   ├── src/                         # Frontend source code
+│   │   ├── components/              # Reusable UI components
+│   │   ├── pages/                   # Pages like Home, Dashboard
+│   │   ├── hooks/                   # API Hooks
+│   │   └── App.js                   # Main App component
+│   └── tailwind.config.js           # Tailwind CSS config
+├── .gitignore                       # Ignoring unnecessary files
+├── requirements.txt                 # Python dependencies
+└── README.md                        # Project documentation
+```
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## ⚙️ **Prerequisites**  
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Ensure you have the following installed:  
+- Python 3.10+  
+- Node.js 18+  
+- npm or yarn  
+- Git  
+- FastAPI  
+- Gmail API access  
+- (Optional) Gemini API access  
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🔎 **Environment Variables**  
 
-## Learn More
+Create a `.env` file in the backend directory:  
+```env
+GEMINI_API_KEY=your_gemini_api_key
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🛠️ **Setup Instructions**  
 
-### Code Splitting
+### 1. Clone the Repository  
+```bash
+git clone https://github.com/Makkohli/phishing-detection.git
+cd phishing-detection
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 2. Backend Setup  
+```bash
+cd backend
+python -m venv venv
+source venv/Scripts/activate  # On Windows
+# source venv/bin/activate    # On Mac/Linux
+pip install -r requirements.txt
+```
 
-### Analyzing the Bundle Size
+### 3. Frontend Setup  
+```bash
+cd ../frontend
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## 🚦 **Running the Project**  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Start Backend:  
+```bash
+cd backend
+uvicorn main:app --reload
+```
+- API will be available at `http://localhost:8000`
 
-### Advanced Configuration
+### Start Frontend:  
+```bash
+cd ../frontend
+npm run dev
+```
+- Frontend will be available at `http://localhost:3000`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## 🧪 **API Endpoints**  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+| Method | Endpoint                  | Description                       |
+|---------|---------------------------|----------------------------------|
+| GET     | `/`                        | Test API                         |
+| POST    | `/analyze_email`           | Analyze phishing & emotions      |
+| GET     | `/fetch_and_analyze`       | Fetch top 5 emails & analyze     |
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## ⚡ **Usage**  
+
+1. **Authenticate with Gmail**:  
+   - Authenticate using OAuth2 to fetch emails.  
+2. **Analyze Emails**:  
+   - Emails will be analyzed for phishing attempts and emotional manipulation.  
+3. **View Results**:  
+   - Results will be displayed on the dashboard.  
+
+---
+
+## 🧑‍💻 **Contributing**  
+
+Contributions are welcome! Feel free to fork the repository and submit a pull request.  
+
+1. Fork the repo.  
+2. Create a new branch:  
+```bash
+git checkout -b feature-branch
+```
+3. Commit your changes:  
+```bash
+git commit -m "Add your feature"
+```
+4. Push the branch:  
+```bash
+git push origin feature-branch
+```
+5. Open a pull request.  
+
+---
+
+## 🛡️ **License**  
+
+This project is licensed under the MIT License.  
+
+---
+
+## 📞 **Contact**  
+
+- **Author:** Manish Kohli  
+- **GitHub:** [Makkohli](https://github.com/Makkohli)  
+- **Email:** manish@example.com  
+
+---
+
+This README provides detailed documentation for your project. If you'd like further customization, let me know! 😊
